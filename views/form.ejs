@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<div class="outer-box">
+  <div class="postTitle">New Blog Post</div>
+  <div class="inner-box">
+
+    <form action="/form" method="POST" enctype="multipart/form-data">
+
+      <label for="title">Title</label><br>
+      <input type="text" id="title" name="title" placeholder="Post Title" required><br><br>
+
+      <label for="content">Content</label><br>
+      <textarea id="content" name="content" rows="5" placeholder="Write your post here..." required></textarea><br><br>
+
+      <label for="image">Upload Image</label><br>
+      <input type="file" id="image" name="image" accept="image/*"><br><br>
+
+      <button type="submit">Publish</button>
+    </form>
+
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
