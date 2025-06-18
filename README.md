@@ -17,3 +17,15 @@ It displays blog content dynamically with clean UI and beginner-friendly structu
 - Static files served via `public/`
 - Clean, minimal design
 
+blogfolio/
+├── app.js             # Main server file
+├── package.json       # Project metadata
+├── public/            # Static files (CSS, images)
+├── views/             # EJS templates
+└── .gitignore         # Files/folders Git should ignore
+
+🙋‍♀️ Author
+Gaurangi Agarwal
+B.Tech CSE | Jaypee Institute
+Learning Full-Stack Web Development
+
