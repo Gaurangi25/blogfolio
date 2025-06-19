@@ -6,16 +6,28 @@
         <% for(let i=0;i<posts.length;i++) { %>
 
             <div class="posts-card">
+
                 <%if(posts[i].image) { %>
                     <img src="<%= posts[i].image %>" alt="Post Image" class="post-image" />
                     <% } %>
 
-                    <h2>
-                        <%= posts[i].title %>
-                    </h2>
-                    <p>
-                        <%= posts[i].content %>
-                    </p>
+                        <h2>
+                            <%= posts[i].title %>
+                        </h2>
+                        <p>
+                            <%= posts[i].content %>
+                        </p>
+
+                        <!--Edit a Post-->
+                        <div class="buttons">
+                            <form action="/edit/<%= posts[i].id %>" method="get">
+                                <button type="submit" class="my-button">✏️ Edit</button>
+                            </form>
+
+                            <form action="/delete/<%= posts[i].id %>" method="post">
+                                <button type="submit" class="my-button">🗑️ Delete</button>
+                            </form>
+                        </div>
             </div>
 
             <% } %>

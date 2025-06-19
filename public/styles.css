@@ -149,6 +149,31 @@ header {
   width: -webkit-fill-available;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.my-button {
+  padding: 5px;
+  background-color: #a9927d;
+  color: #22333b;
+  font-family: cursive;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+.my-button:hover {
+  background-color: #8d745e;
+  color: #c3c3c3;
+   transform: scale(1.03);
+}
+
 /* all posts -> home.ejs */
 .posts-container {
   display: flex;
