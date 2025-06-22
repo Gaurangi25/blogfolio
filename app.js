@@ -30,7 +30,6 @@ fs.readdir(uploadsDir, (err, files) => {
   console.log("Uploads folder cleaned.");
 });
 
-
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "public/uploads");
@@ -96,6 +95,16 @@ app.post("/edit/:id", upload.single("image"), (req, res) => {
   if (req.file) {
     posts[postIndex].image = "/uploads/" + req.file.filename;
   }
+
+  res.redirect("/");
+});
+
+app.post("/delete/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const index = posts.findIndex((p) => p.id === id);
+  if (index == -1) return res.send("Post not found..");
+
+  posts.splice(index, 1);
 
   res.redirect("/");
 });
