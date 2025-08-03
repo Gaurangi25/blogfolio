@@ -16,9 +16,3 @@ It displays blog content dynamically with clean UI and beginner-friendly structu
 - EJS templates for rendering views
 - Static files served via `public/`
 - Clean, minimal design
-
-🙋‍♀️ Author
-Gaurangi Agarwal
-B.Tech CSE | Jaypee Institute
-Learning Full-Stack Web Development
-
